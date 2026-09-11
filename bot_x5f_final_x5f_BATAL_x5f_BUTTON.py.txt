@@ -33,9 +33,10 @@ DEFAULT_TEMPLATE = """📍 KAB : {KAB}
 💳 KPJ : {KPJ}
 🔰 SENSOR: {SENSOR}
 📆 IT : {IURAN_T}
+
 🏛️ PT : {PT}
 
-🏆 DPT JMO LASIK ✅"""
+📩 DPT JMO LASIK ✅"""
 
 def init_db():
     conn = sqlite3.connect(DB_PATH)
@@ -191,11 +192,12 @@ ___________________
 
 🆔 KELAMIN : {detail['kelamin']}
 💳 KPJ : {detail['kpj']}
-📡 SENSOR: {detail['sensor']}
+🔰 SENSOR: {detail['sensor']}
 📅 IT : {detail['iuran_t']}
+
 🏛️ PT : {detail['pt'].upper()}
 
-🏆 DPT JMO LASIK ✅"""
+📩 DPT JMO LASIK ✅"""
     return s
 
 def move_to_riwayat(user_id, tipe, data_row):
@@ -965,9 +967,10 @@ async def button_handler(update, context):
 💳 KPJ : {{KPJ}}
 🔰 SENSOR: {{SENSOR}}
 📆 IT : {{IT}}
+
 🏛️ PT : {{PT}}
 
-🏆 DPT JMO LASIK ✅
+📩 DPT JMO LASIK ✅
 
 ---
 Template saat ini (raw):
