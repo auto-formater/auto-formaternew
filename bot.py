@@ -29,7 +29,7 @@ if ADMIN_IDS_RAW:
 DB_PATH = os.getenv("DB_PATH", "bot_data.db")
 Path(DB_PATH).parent.mkdir(parents=True, exist_ok=True)
 GARIS = "___________________"
-DEFAULT_TEMPLATE = """SEX {KODE_ATAS}
+DEFAULT_TEMPLATE = """ {KODE_ATAS}
 KAB : {KAB}
 KEC : {KEC}
 KEL : {KEL}
@@ -215,19 +215,19 @@ def make_display_text(detail, sex_code="005"):
         s = f"""        SEX {sex_code}
 ___________________
 
-📍 KAB : {detail.get('kab','-').upper()}
-📍 KEC : {detail.get('kec','-').upper()}
-📍 KEL : {detail.get('kel','-').upper()}
+📍KAB : {detail.get('kab','-').upper()}
+📍KEC : {detail.get('kec','-').upper()}
+📍KEL : {detail.get('kel','-').upper()}
 
 💰 SALDO : {detail.get('saldo','-')}
 
-🆔 KELAMIN : {detail.get('kelamin','-')}
-💳 KPJ : {detail.get('kpj','-')}
-📡 SENSOR: {detail.get('sensor','-')}
-📅 IT : {detail.get('iuran_t','-')}
-🏛️ PT : {detail.get('pt','-').upper()}
+KELAMIN : {detail.get('kelamin','-')}
+KPJ : {detail.get('kpj','-')}
+SENSOR : {detail.get('sensor','-')}
+IT : {detail.get('iuran_t','-')}
+PT : {detail.get('pt','-').upper()}
 
-🏆 DPT JMO LASIK ✅"""
+⚠️ DATA MENTAH YAH GAESSSS"""
         return s
     except Exception as e:
         logger.error(f"make_display_text: {e}")
