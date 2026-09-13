@@ -404,7 +404,7 @@ def main_menu_keyboard(is_admin=False):
         [InlineKeyboardButton("👤 PROFIL", callback_data="menu_profil"),
          InlineKeyboardButton("⌨️ BUAT FORMAT", callback_data="menu_buat")],
         [InlineKeyboardButton("📄 HASIL FORMAT", callback_data="menu_hasil_format"),
-         InlineKeyboardButton("📑 FORMAT+AKUN", callback_data="menu_hasil_full")],
+         InlineKeyboardButton("📂 FORMAT+AKUN", callback_data="menu_hasil_full")],
         [InlineKeyboardButton("⚙️ SETTING", callback_data="menu_setting"),
          InlineKeyboardButton("🕘 HISTORY", callback_data="menu_history")],
         [InlineKeyboardButton("📞 HUBUNGI ADMIN", callback_data="hubungi_admin")],
@@ -537,8 +537,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"👤 Nama : {nama_db}\n"
             f"📱 Username : {username_display}\n"
             f"💰 Saldo : Rp {saldo_db}\n\n"
-            f"📅 Berakhir : {expired_display}\n"
-            f"📊 Status : 🟢 AKTIF"
+        
         )
         await query.edit_message_text(profil_text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⬅️ KEMBALI", callback_data="back_main")]]))
 
@@ -669,7 +668,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             return
         
         await query.edit_message_text(
-            f"📑 **HASIL FORMAT+AKUN** - {len(rows)} data\n\nUrutan: terkecil ke terbesar\n{rows[0][1]} → {rows[-1][1]}\n\nMenampilkan urut ASD 001, 002, 003...",
+            f"📂 **FORMAT+AKUN** - {len(rows)} data\n\nUrutan: terkecil ke terbesar\n{rows[0][1]} → {rows[-1][1]}\n\nMenampilkan urut ASD 001, 002, 003...",
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton("🔍 CARI (Kode/Nama/KAB/Akun)", callback_data="cari_akun")],
                 [InlineKeyboardButton("➡️ TAMPILKAN SEMUA", callback_data="tampilkan_full")]
