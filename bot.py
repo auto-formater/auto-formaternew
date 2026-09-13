@@ -402,9 +402,9 @@ def build_display(data_dict, template, kode_pos="atas"):
 def main_menu_keyboard(is_admin=False):
     keyboard = [
         [InlineKeyboardButton("👤 PROFIL", callback_data="menu_profil"),
-         InlineKeyboardButton("⌨️ BUAT FORMAT", callback_data="menu_buat")],
+         InlineKeyboardButton("📝 BUAT FORMAT", callback_data="menu_buat")],
         [InlineKeyboardButton("📄 HASIL FORMAT", callback_data="menu_hasil_format"),
-         InlineKeyboardButton("📑 FORMAT+AKUN", callback_data="menu_hasil_full")],
+         InlineKeyboardButton("📂 FORMAT+AKUN", callback_data="menu_hasil_full")],
         [InlineKeyboardButton("⚙️ SETTING", callback_data="menu_setting"),
          InlineKeyboardButton("🕘 HISTORY", callback_data="menu_history")],
         [InlineKeyboardButton("📞 HUBUNGI ADMIN", callback_data="hubungi_admin")],
@@ -460,7 +460,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     welcome_text = (
         "🟢 MODE ON DI AKTIFKAN\n"
         "━━━━━━━━━━━━━━━━━━━━━\n"
-        f"👋 Selamat datang, {first_name}! Gimana kabarnya nih, saya berharap kabar baik-baik saja yah, tetap semangat dan jangan lupa bersyukur. Silahkan pilih menu di bawah ini : 👇"
+        f"👋 Selamat datang, {first_name}! Gassskeun bosssqu jangan malu-malu, pakai auto format bair pro, jangan lupa ngopi biar gak oleng. Silahkan pilih menu di bawah ini : 👇"
     )
     is_admin = check_is_admin(user_id)
     await update.message.reply_text(welcome_text, reply_markup=main_menu_keyboard(is_admin))
@@ -475,7 +475,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         welcome_text = (
             "🟢 MODE ON DI AKTIFKAN\n"
             "━━━━━━━━━━━━━━━━━━━━━\n"
-            "👋 Selamat datang, SAHABAT JHT! Gimana kabarnya nih, saya berharap kabar baik-baik saja yah, tetap semangat dan jangan lupa bersyukur. Silahkan pilih menu di bawah ini : 👇"
+            "👋 Selamat datang, SAHABAT JHT! pilih menu lagi bossquu, jangan lupa ngopi dan beristirahat. Silahkan pilih menu di bawah ini : 👇"
         )
         is_admin = check_is_admin(user_id)
         await query.edit_message_text(welcome_text, reply_markup=main_menu_keyboard(is_admin))
