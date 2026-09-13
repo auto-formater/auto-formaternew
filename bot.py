@@ -84,8 +84,8 @@ def init_db():
         CREATE TABLE IF NOT EXISTS settings (
             user_id INTEGER PRIMARY KEY,
             template TEXT,
-            kode_atas TEXT DEFAULT '0000001',
-            kode_prefix TEXT DEFAULT 'MGB',
+            kode_atas TEXT DEFAULT '001',
+            kode_prefix TEXT DEFAULT 'SEXS',
             kode_pos TEXT DEFAULT 'atas',
             kode_base_count INTEGER DEFAULT 0
         )
@@ -186,9 +186,9 @@ def get_setting(user_id):
         c.execute("SELECT template, kode_atas, kode_prefix, kode_pos FROM settings WHERE user_id=?", (user_id,))
     row = c.fetchone()
     if not row:
-        c.execute("INSERT INTO settings (user_id, template, kode_atas, kode_prefix, kode_pos, kode_base_count) VALUES (?, ?, ?, ?, ?, ?)", (user_id, DEFAULT_TEMPLATE, "0000001", "MGB", "atas", 0))
+        c.execute("INSERT INTO settings (user_id, template, kode_atas, kode_prefix, kode_pos, kode_base_count) VALUES (?, ?, ?, ?, ?, ?)", (user_id, DEFAULT_TEMPLATE, "001", "SEXS", "atas", 0))
         conn.commit()
-        template, kode_atas, kode_prefix, kode_pos, base_count = DEFAULT_TEMPLATE, "0000001", "MGB", "atas", 0
+        template, kode_atas, kode_prefix, kode_pos, base_count = DEFAULT_TEMPLATE, "001", "SEXS", "atas", 0
     else:
         if len(row) == 3:
             template, kode_atas, kode_prefix = row
