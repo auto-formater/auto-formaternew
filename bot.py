@@ -475,7 +475,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         welcome_text = (
             "🟢 MODE ON DI AKTIFKAN\n"
             "━━━━━━━━━━━━━━━━━━━━━\n"
-            "👋 Selamat datang, SAHABAT JHT! pilih menu lagi bossquu, tetap semangat kalau lelah jangan lupa istirahat yahhh. Silahkan pilih menu lagi di bawah ini : 👇"
+            "👋 Ketemu lagi deh, SAHABAT JHT! tetap semangat kalau lelah jangan lupa istirahat yahhh. Silahkan pilih menu lagi di bawah ini : 👇"
         )
         is_admin = check_is_admin(user_id)
         await query.edit_message_text(welcome_text, reply_markup=main_menu_keyboard(is_admin))
