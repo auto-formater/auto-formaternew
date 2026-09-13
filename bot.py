@@ -460,7 +460,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     welcome_text = (
         "🟢 MODE ON DI AKTIFKAN\n"
         "━━━━━━━━━━━━━━━━━━━━━\n"
-        f"👋 Selamat datang, {first_name}! Gassskeun bosssqu jangan malu-malu, pakai auto format bair pro, jangan lupa ngopi biar gak oleng. Silahkan pilih menu di bawah ini : 👇"
+        f"👋 Selamat datang, {first_name}! Gassskeun bosssqu jangan malu-malu, pakai auto format dong biarr pro..wkwk, jangan lupa ngopi biar gak oleng yah bosquu. Silahkan pilih menu di bawah ini : 👇"
     )
     is_admin = check_is_admin(user_id)
     await update.message.reply_text(welcome_text, reply_markup=main_menu_keyboard(is_admin))
@@ -475,7 +475,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         welcome_text = (
             "🟢 MODE ON DI AKTIFKAN\n"
             "━━━━━━━━━━━━━━━━━━━━━\n"
-            "👋 Selamat datang, SAHABAT JHT! pilih menu lagi bossquu, jangan lupa ngopi dan beristirahat. Silahkan pilih menu di bawah ini : 👇"
+            "👋 Selamat datang, SAHABAT JHT! pilih menu lagi bossquu, tetap semangat kalau lelah jangan lupa istirahat yahhh. Silahkan pilih menu lagi di bawah ini : 👇"
         )
         is_admin = check_is_admin(user_id)
         await query.edit_message_text(welcome_text, reply_markup=main_menu_keyboard(is_admin))
