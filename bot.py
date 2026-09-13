@@ -84,8 +84,8 @@ def init_db():
         CREATE TABLE IF NOT EXISTS settings (
             user_id INTEGER PRIMARY KEY,
             template TEXT,
-            kode_atas TEXT DEFAULT '0000001',
-            kode_prefix TEXT DEFAULT 'MGB',
+            kode_atas TEXT DEFAULT '001',
+            kode_prefix TEXT DEFAULT 'ABC',
             kode_pos TEXT DEFAULT 'atas',
             kode_base_count INTEGER DEFAULT 0
         )
@@ -475,7 +475,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         welcome_text = (
             "🟢 MODE ON DI AKTIFKAN\n"
             "━━━━━━━━━━━━━━━━━━━━━\n"
-            "👋 Ketemu lagi deh, SAHABAT JHT! tetap semangat kalau lelah jangan lupa istirahat yahhh. Silahkan pilih menu lagi di bawah ini : 👇"
+            "👋 Ketemu lagi deh ! tetap semangat kalau lelah jangan lupa istirahat yahhh ,berkah berkah berkah. Silahkan pilih menu lagi di bawah ini : 👇"
         )
         is_admin = check_is_admin(user_id)
         await query.edit_message_text(welcome_text, reply_markup=main_menu_keyboard(is_admin))
