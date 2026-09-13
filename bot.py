@@ -303,7 +303,7 @@ def main_menu_keyboard():
         [InlineKeyboardButton("👤 PROFIL", callback_data="menu_profil"),
          InlineKeyboardButton("⌨️ BUAT FORMAT", callback_data="menu_buat")],
         [InlineKeyboardButton("📄 HASIL FORMAT", callback_data="menu_hasil_format"),
-         InlineKeyboardButton("📑 HASIL AKUN", callback_data="menu_hasil_full")],
+         InlineKeyboardButton("🗃️ HASIL AKUN", callback_data="menu_hasil_full")],
         [InlineKeyboardButton("⚙️ SETTING", callback_data="menu_setting"),
          InlineKeyboardButton("🕘 HISTORY", callback_data="menu_history")],
         [InlineKeyboardButton("📞 HUBUNGI ADMIN", callback_data="hubungi_admin")],
@@ -562,7 +562,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             return
         
         await query.edit_message_text(
-            f"📑 **HASIL HASIL AKUN** - {len(rows)} data\n\nUrutan: terkecil ke terbesar\n{rows[0][1]} → {rows[-1][1]}\n\nMenampilkan urut ASD 001, 002, 003...",
+            f"🗃️ **HASIL HASIL AKUN** - {len(rows)} data\n\nUrutan: terkecil ke terbesar\n{rows[0][1]} → {rows[-1][1]}\n\nMenampilkan urut ASD 001, 002, 003...",
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton("🔍 CARI (Kode/Nama/KAB/Akun)", callback_data="cari_akun")],
                 [InlineKeyboardButton("➡️ TAMPILKAN SEMUA", callback_data="tampilkan_full")]
